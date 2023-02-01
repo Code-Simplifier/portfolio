@@ -1,5 +1,5 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useEffect, useRef, useState } from "react";
+import { motion, useAnimation } from "framer-motion";
 
 type Props = { text: String };
 
@@ -42,12 +42,8 @@ export const AnimatedTextCharacter = ({ text }: Props) => {
       style={{ overflow: "hidden", display: "flex", fontSize: "2rem" }}
       variants={container}
       initial="hidden"
-      animate="visible"
-      transition={
-        {
-          // type: ""
-        }
-      }
+      whileInView="visible"
+      viewport={{ once: true }}
     >
       {letters.map((letter, index) => (
         <motion.span variants={child} key={index}>

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import React from "react";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
-import { AnimatedTextCharacter } from "./AnimatedText";
+import { AnimatedTextCharacter, AnimatedTextWord } from "./AnimatedText";
 import Background from "./Background";
 
 type Props = {};
@@ -18,17 +18,20 @@ function Hero({}: Props) {
       "print('Python is a 🐍')",
     ],
     loop: true,
-    delaySpeed: 2000,
+    delaySpeed: 500,
   });
 
   return (
     <div className="text-white h-screen flex flex-col text-center overflow-hidden space-y-8 items-center justify-center">
       <Background />
-      <img
-        className="relative w-40 h-40 object-cover mx-auto rounded-full"
-        src="/main.jpeg"
-        alt="A really cool picture!"
-      />
+      <div className="relative">
+        <div className="absolute w-44 h-44 bg-gradient-to-r from-pink-600 to bg-purple-500 -inset-2 rounded-full blur-md slow-spin"></div>
+        <img
+          className="relative w-40 h-40 object-cover mx-auto rounded-full"
+          src="/main.jpeg"
+          alt="A really cool picture!"
+        />
+      </div>
       <div className="z-20">
         <motion.div
           style={{ fontFamily: mont_regular.style.fontFamily }}
@@ -46,37 +49,81 @@ function Hero({}: Props) {
           <Cursor cursorColor="#45f3ff" />
         </div>
         <div className="pt-5">
-          <Link href="#">
-            <button
+          <Link href="#about">
+            <motion.button
+              initial={{
+                x: -50,
+                opacity: 0,
+              }}
+              animate={{
+                x: 0,
+                opacity: 1,
+              }}
+              transition={{
+                delay: 3,
+              }}
               style={{ fontFamily: mont_bold.style.fontFamily }}
               className="heroButton"
             >
               About
-            </button>
+            </motion.button>
           </Link>
           <Link href="#">
-            <button
+            <motion.button
+              initial={{
+                x: -50,
+                opacity: 0,
+              }}
+              animate={{
+                x: 0,
+                opacity: 1,
+              }}
+              transition={{
+                delay: 3.5,
+              }}
               style={{ fontFamily: mont_bold.style.fontFamily }}
               className="heroButton"
             >
               Projects
-            </button>
+            </motion.button>
           </Link>
-          <Link href="#">
-            <button
+          <Link href="#skills">
+            <motion.button
+              initial={{
+                x: 50,
+                opacity: 0,
+              }}
+              animate={{
+                x: 0,
+                opacity: 1,
+              }}
+              transition={{
+                delay: 4,
+              }}
               style={{ fontFamily: mont_bold.style.fontFamily }}
               className="heroButton"
             >
               Skills
-            </button>
+            </motion.button>
           </Link>
           <Link href="#">
-            <button
+            <motion.button
+              initial={{
+                x: 50,
+                opacity: 0,
+              }}
+              animate={{
+                x: 0,
+                opacity: 1,
+              }}
+              transition={{
+                delay: 4.5,
+              }}
               style={{ fontFamily: mont_bold.style.fontFamily }}
               className="heroButton"
             >
               Contact
-            </button>
+            </motion.button>
           </Link>
         </div>
       </div>

@@ -4,12 +4,13 @@ import { TfiGithub } from "react-icons/tfi";
 import { MdOutlineEmail } from "react-icons/md";
 import { mont_regular } from "@/styles/fonts";
 import { motion } from "framer-motion";
+import { AnimatedTextCharacter } from "./AnimatedText";
 
 type Props = {};
 
 function Header({}: Props) {
   return (
-    <header className="fixed w-screen lg:px-20 text-white flex justify-between z-40">
+    <header className="fixed w-full backdrop-blur-lg border-b rounded-md border-gray-700 lg:px-20 text-white flex justify-between z-40">
       <div className="flex p-5 items-center">
         <motion.div
           initial={{
@@ -25,7 +26,7 @@ function Header({}: Props) {
           transition={{ duration: 1 }}
         >
           <ImBlogger
-            className="text-cyan-300 mr-8 hover:text-glow hover:scale-150 hover:duration-700 hover:mr-12 duration-1000"
+            className="text-purple-500 mr-8 hover:text-glow hover:scale-150 hover:duration-700 hover:mr-12 duration-1000"
             size={25}
           />
         </motion.div>
@@ -43,7 +44,7 @@ function Header({}: Props) {
           transition={{ duration: 2 }}
         >
           <ImTwitter
-            className="text-cyan-300 mr-8 hover:text-glow hover:scale-150 hover:duration-700 hover:mr-12 duration-1000"
+            className="text-purple-500 mr-8 hover:text-glow hover:scale-150 hover:duration-700 hover:mr-12 duration-1000"
             size={25}
           />
         </motion.div>
@@ -61,7 +62,7 @@ function Header({}: Props) {
           transition={{ duration: 3 }}
         >
           <TfiGithub
-            className="text-cyan-300 mr-8 hover:text-glow hover:scale-150 hover:duration-700 hover:mr-12 duration-1000"
+            className="text-purple-500 mr-8 hover:text-glow hover:scale-150 hover:duration-700 hover:mr-12 duration-1000"
             size={25}
           />
         </motion.div>
@@ -78,29 +79,27 @@ function Header({}: Props) {
             opacity: 1,
             scale: 1,
           }}
-          transition={{ duration: 3 }}
+          transition={{ duration: 1.5 }}
         >
           <MdOutlineEmail
-            className="text-cyan-300 hover:text-glow hover:scale-150 hover:duration-700 hover:ml-12 duration-1000"
+            className="text-purple-500 hover:text-glow hover:scale-150 hover:duration-700 hover:ml-12 duration-1000"
             size={25}
           />
         </motion.div>
         <motion.p
           initial={{
-            x: 500,
+            y: 30,
             opacity: 0,
-            scale: 0.5,
           }}
           animate={{
-            x: 0,
+            y: 0,
             opacity: 1,
-            scale: 1,
           }}
-          transition={{ duration: 1.5 }}
-          className="uppercase ml-4 hidden md:inline-flex"
+          transition={{ duration: 3 }}
+          className="uppercase ml-4 heroText text-center hidden md:inline-flex"
           style={{ fontFamily: mont_regular.style.fontFamily }}
         >
-          Get in touch
+          Get in Touch
         </motion.p>
       </div>
     </header>
