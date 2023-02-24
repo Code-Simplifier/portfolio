@@ -24,14 +24,14 @@ export default function Home() {
         <section id="hero" className="snap-start scroll-smooth">
           <Hero />
         </section>
-        <section id="about" className="snap-center mt-10 scroll-smooth">
+        <section id="about" className="snap-start mt-10 scroll-smooth">
           <About />
         </section>
-        <section id="projects" className="snap-start">
-          <Projects />
-        </section>
-        <section id="skills" className="snap-start">
+        <section id="skills" className="snap-start scroll-smooth">
           <Skills />
+        </section>
+        <section id="projects" className="snap-start scroll-smooth">
+          <Projects />
         </section>
       </main>
     </>

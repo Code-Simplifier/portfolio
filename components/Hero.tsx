@@ -68,7 +68,7 @@ function Hero({}: Props) {
               About
             </motion.button>
           </Link>
-          <Link href="#">
+          {/* <Link href="#">
             <motion.button
               initial={{
                 x: -50,
@@ -86,7 +86,7 @@ function Hero({}: Props) {
             >
               Projects
             </motion.button>
-          </Link>
+          </Link> */}
           <Link href="#skills">
             <motion.button
               initial={{
