@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { AnimatedTextCharacter } from "./AnimatedText";
+import { AnimatedTextCharacter } from "../AnimatedText";
 import { mont_regular } from "@/styles/fonts";
 
 type Props = { text: String };

@@ -39,7 +39,7 @@ export const AnimatedTextCharacter = ({ text }: Props) => {
 
   return (
     <motion.div
-      style={{ overflow: "hidden", display: "flex", fontSize: "2rem" }}
+      className="overflow-hidden flex justify-center lg:text-4xl md:text-xl sm:text-lg"
       variants={container}
       initial="hidden"
       whileInView="visible"

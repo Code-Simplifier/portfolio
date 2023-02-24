@@ -2,7 +2,7 @@ import React from "react";
 import { lato_regular, mont_regular } from "@/styles/fonts";
 import { motion } from "framer-motion";
 import { AnimatedTextCharacter, AnimatedTextWord } from "./AnimatedText";
-import Title from "./title";
+import Title from "./modules/title";
 
 type Props = {};
 
@@ -16,18 +16,29 @@ function About({}: Props) {
           whileInView={{ x: 0, opacity: 1, scale: 1 }}
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
-          src="/main.jpeg"
+          src="/about2.jpeg"
           alt="a really cool picture!"
-          className="lg:mt-10 md:mt-[380px] sm:mt-[300px] self-center w-56 h-56 object-cover rounded-full md:rounded-lg md:w-64 md:h-96 xl:min-w-fit xl:h-[550px]"
+          className="mt-20 shadow-purple-500 shadow-xl hidden md:inline-flex self-center w-56 h-56 object-cover rounded-full md:rounded-lg md:w-64 md:h-96 xl:min-w-fit xl:h-[550px]"
         />
         <div
           style={{ fontFamily: lato_regular.style.fontFamily }}
           className="lg:mt-48 md:mt-4 md:px-10 text-xl flex flex-col items-center justify-center"
         >
-          <div className="text-3xl tracking-wider mb-4">
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1.2 }}
+            viewport={{ once: true }}
+            className="text-3xl tracking-wider mb-4"
+          >
             Some <span className="heroText">things</span> about me
-          </div>
-          <motion.div>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 2, delay: 0.5 }}
+            viewport={{ once: true }}
+          >
             Hi there! I am a skilled{" "}
             <span className="heroText">web developer</span> with a passion for
             creating innovative and{" "}

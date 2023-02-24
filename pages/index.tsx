@@ -27,8 +27,11 @@ export default function Home() {
         <section id="about" className="snap-center mt-10 scroll-smooth">
           <About />
         </section>
-        <section id="projects" className="snap-center">
+        <section id="projects" className="snap-start">
           <Projects />
+        </section>
+        <section id="skills" className="snap-start">
+          <Skills />
         </section>
       </main>
     </>

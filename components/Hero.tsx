@@ -35,7 +35,7 @@ function Hero({}: Props) {
       <div className="z-20">
         <motion.div
           style={{ fontFamily: mont_regular.style.fontFamily }}
-          className="text-gray-600 uppercase text-2xl tracking-[15px]"
+          className="text-gray-600 uppercase tracking-[15px]"
         >
           <AnimatedTextCharacter text="Web Developer" />
         </motion.div>
